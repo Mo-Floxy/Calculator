@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full-Screen Layout */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  max-width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full screen height */
+  background-color: black;
+}
+
+#display {
+  background: #222;
+  color: #fff;
+  font-size: 60px;
+  text-align: right;
+  padding: 10px;
+  height: 100px;
+  box-sizing: border-box;
+  border-radius: 30px 30px 0 0;
+  overflow: hidden; /* Hides overflowing text */
+  text-overflow: ellipsis; /* Shows "..." if text overflows */
+  white-space: nowrap;
+}
+
+#calculator {
+  border-width: 100px;
+  height: 500px;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px; /* Restrict width */
+  background: #fff;
+  border-radius: 30px;
+  box-shadow: 0px 0px 8px white;
+  overflow: hidden;
+}
+
+button {
+  width: 110px;
+  text-shadow: 100px;
+  border: 1px solid #ddd;
+  user-select: none;
+  box-shadow: 1px 2px 10px #222;
+
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  font-size: 1.2rem;
+  background: grey;
+  color: white;
+
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 buttons per row */
+  row-gap: 5px;
+  column-gap: -30px; /* Add space between buttons */
+  padding: 40px 0 0 10px;
+}
+
+button:hover {
+  background-color: white;
+  color: #222;
+}
+button:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 480px) {
+  body {
+    background-color: black; /* Change background color for small screens */
+    /* padding: 0;
+        margin: 0;
+        box-sizing: border-box; */
+  }
+  #calculator {
+    height: 400px;
+    margin: 20px;
+  }
+  #display {
+    font-size: 1.5rem;
+    height: 70px;
+  }
+
+  button {
+    font-size: 1rem;
+    height: 40px;
+    width: 80px;
+  }
+  .btn {
+    padding: 40px 3px 0 5px;
+  }
+}

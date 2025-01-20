@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator😎</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="calculator">
+        <div id="display">0</div>
+        <div id="buttons">
+
+            <span class="btn">
+                <!-- Row 1 -->
+
+                <button onclick="appendValue('0')" style="background-color: #222; color: white;">%</button>
+                <button onclick="clearDisplay('0')" style="background-color: #222; color: white;">CE</button>
+                <button onclick="clearDisplay('0')" style="background-color: #222; color: white;">C</button>
+                <button onclick="deleteLast()" style="background-color: #222; color: white;">⌫</button>
+
+
+
+                <!-- Row 2 -->
+
+                <button onclick="reciprocal()" style="color: #222">1/x</button>
+                <button onclick="square()" style="color: #222">x²</button>
+                <button onclick="twoSqrtX()" style="color: #222">2√x</button>
+                <button onclick="appendValue('/')" style="background-color: #222; color: white;">/</button>
+
+
+
+                <!-- Row 3 -->
+
+                <button onclick="appendValue('7')" style="color: #222;">7</button>
+                <button onclick="appendValue('8')" style="color: #222;">8</button>
+                <button onclick="appendValue('9')" style="color: #222;">9</button>
+                <button onclick="appendValue('*')" style="background-color: #222; color: white;">*</button>
+
+
+
+                <!-- Row 4 -->
+
+                <button onclick="appendValue('4')" style="color: #222;">4</button>
+                <button onclick="appendValue('5')" style="color: #222;">5</button>
+                <button onclick="appendValue('6')" style="color: #222;">6</button>
+                <button onclick="appendValue('-')" style="background-color: #222; color: white;">-</button>
+
+
+
+                <!-- Row 5 -->
+
+                <button onclick="appendValue('1')" style="color: #222;">1</button>
+                <button onclick="appendValue('2')" style="color: #222;">2</button>
+                <button onclick="appendValue('3')" style="color: #222;">3</button>
+                <button onclick="appendValue('+')" style="background-color: #222; color: white;">+</button>
+
+
+
+                <!-- Row 6 -->
+
+
+                <button onclick="changeSign('-')" style="color: #222;">+/-</button>
+                <button onclick="appendValue('0')" style="color: #222;">0</button>
+                <button onclick="appendValue('.')" style="color: #222;">.</button>
+                <button onclick="calculate()" style="background-color: #222; color: white;">=</button>
+            </span>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
+
+<!-- display: grid;
+grid-template-columns: repeat(4,1fr);
+grid-gap: 10px;
+} -->
